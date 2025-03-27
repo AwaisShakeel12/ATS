@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream ATS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            
+            color: white;
+            overflow-x: hidden;
+            background-color: azure;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            height: 50px;
+            clip-path: path("M0,100 L100%,0 L100,80 Q50,140 0,80 Z");
+
+            
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links li {
+            display: inline;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .nav-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+        .sign-in {
+            color: white;
+            margin-right: 15px;
+        }
+        .contact-sales {
+            background: white;
+            background-color: azure;
+            color: black;
+            font-weight: bold;
+           
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 150px 20px 100px;
+            background: linear-gradient(to right, #031e38, #2bffb1);
+            background: linear-gradient(to right, #100245, #2bffb1);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+       
+        }
+        .cta-banner {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .cta-banner a {
+            color: white;
+            font-weight: bold;
+        }
+        .content {
+            padding: 50px;
+            background: white;
+            background-color: azure;
+            color: black;
+        }
+
+
+        .chat-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            flex: 1;
+            margin-top: -20px;
+            background-color: azure;
+        }
+
+       
+
+        .main-content {
+            margin-top: 0px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: azure;
+            
+        }
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            height: 100%;
+           
+        }
+        .score_and_spell {
+            display: flex;
+            flex-direction: row;
+            grid-gap: 20px;
+            height: 100%;
+        }
+        .card {
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transition: transform 0.3s;
+           
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .card-score {
+          
+            width: 200px;
+            padding: 0px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transition: transform 0.3s;
+        
+        }
+
+        .scrollable {
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        .score-circle {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f9f9f9;
+            background-color: azure;
+            overflow: hidden;
+          }
+          
+          .score-circle::before {
+            content: '';
+            position: absolute;
+            width: 95%;
+            height: 95%;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-top: 8px solid #0078ff;
+            animation: rotateBorder 1s linear infinite;
+          }
+          
+          .score-circle span {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0078ff;
+          }
+          
+          /* Rotate Border Animation */
+          @keyframes rotateBorder {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+          }
+
+          .logo_box{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .contact-sales {
+            background: white;
+            background-color: azure;
+            color: black;
+            font-weight: bold;
+           
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            background: #32CD32;
+            color: white;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-submit:hover {
+            background: navy;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo_box">
+            <img style="height: 50px; width: 80px; border-radius: 10%; margin-right: 10px; margin-top: -10px;" src="Dream_logo - Copy.jpg" alt="">
+            <div class="logo">Dream AI</div>
+        </div>
+           
+        </ul>
+        <div class="nav-buttons">
+           
+            <a href="#" class="contact-sales" style="margin-left: -200px;">Contact</a>
+        </div>
+    </nav>
+    <header class="hero">
+
+       
+            <div class="cta-banner">AI Solutions &bull; <a href="{% url 'home' %}">Upload New</a></div>
+     
+        <h1>Enhance Your Resume With Dream AI</h1>
+    </header>
+    <div class="content-wrapper">
+       
+        <div class="main-content">
+            <div class="content">
+                <div class="score_and_spell" >
+                    <div class="card-score" style="color: blueviolet; background-color: blueviolet; ">
+                        <p style="color: white;">Resume Score</p>
+                        <span class="score-circle" style="font-size: 30px;">{{ score|default:"Score" }}</span>
+                    </div>
+                    <div class="card" style="color: white; background-color: red; width: 100%;" >
+                        <h5>Spell Mistakes</h5>
+            
+                        
+                        <p> {{spelling_mistakes.spell|default:"No spelling mistakes found."}}</p>
+                    </div>
+
+
+                </div>
+        
+                <div class="card scrollable">
+                    <h5>Review</h5>
+                    <p>{{ full_review.review }}</p>
+                 
+                </div>
+
+                <div class="card scrollable"  style="color: white; background-color: #30fd44;">
+                    <h5>Strengths</h5>
+                    <p>{{ review.strengths }}</p>
+                  
+                </div>
+
+
+                <div class="card scrollable"  style="color: white; background-color: #ff208c;">
+                    <h5>Weakness</h5>
+                    <p> {{ review.weaknesses }}</p>
+                    
+                </div>
+
+                <div class="card scrollable"  style="color: white; background-color: #f0ff20;">
+                    <h5>Suggestion</h5>
+            
+                    <p>{{ review.final_suggestion }}</p>
+                </div>
+
+
+
+
+          
+                <div class="card scrollable" style="color: white; background-color: aquamarine; ">
+                    <h5>Missing Keywords</h5>
+                   
+                    <p>{{ missing_keywords|join:", " }}</p>
+                </div>
+               
+
+                <div class="card scrollable" style="color: white; background-color: rgb(7, 46, 241); ">
+                    <h5>Qulity Impact</h5>
+ 
+
+                    {% if quality_impact.issues %}
+                    <ul>
+                        {% for tip in quality_impact.issues %}
+                            <li>
+                                <strong>Line:</strong> {{ tip.line }} <br>
+                                <strong>Problem:</strong> {{ tip.problem }} <br>
+                                <strong>Solution:</strong> {{ tip.solution }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                        {% else %}
+                            <p>No Impact Found</p>
+                        {% endif %}
+
+                    
+
+
+                </div>
+
+
+
+                <div class="card scrollable" style="color: white; background-color: forestgreen;">
+                    <h5>Improvement Tips</h5>
+                   
+                    {% for tip in improvements %}
+                        <li>{{ tip|default:"No improvement tips available." }}</li>
+                    {% endfor %}
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

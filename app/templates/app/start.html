@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            
+            color: white;
+            overflow-x: hidden;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+         
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            height: 80px;
+            clip-path: path("M0,100 L100%,0 L100,80 Q50,140 0,80 Z");
+
+            
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links li {
+            display: inline;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .nav-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+        .sign-in {
+            color: white;
+            margin-right: 15px;
+        }
+        .contact-sales {
+            background: white;
+            color: black;
+            font-weight: bold;
+           
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 150px 20px 100px;
+            background: linear-gradient(to right, #030039, #2bffb1);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+       
+        }
+        .cta-banner {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            margin-left: -100px;
+        }
+        .cta-banner a {
+            color: white;
+            font-weight: bold;
+        }
+        .content {
+            padding: 50px;
+            background: white;
+            color: black;
+        }
+
+
+
+
+
+
+
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow-x: hidden;
+            background: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(255, 255, 255, 0.1);
+
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            height: 50px;
+            clip-path: path("M0,100 L100%,0 L100,80 Q50,140 0,80 Z");
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 150px 20px 50px;
+            background: linear-gradient(to right, #100245, #2bffb1);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .content-wrapper {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+            height: auto;
+            padding: 20px;
+            margin-top: -50px;
+           
+           
+        }
+        .form-box {
+            width: 50%;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: slideUp 1s ease-in-out;
+            z-index: 2;
+            margin-left: 80%;
+            margin-top: -150px;
+            height: 330px;
+
+        }
+        .form-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: navy;
+            font-size: 24px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 00px;
+            border-radius: 8px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+        }
+        .form-control:focus {
+            border-color: #32CD32;
+            box-shadow: 0 0 10px rgba(50, 205, 50, 0.5);
+        }
+        .file-input {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            border: 2px dashed #32CD32;
+            text-align: center;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 30px;
+            background: rgba(50, 205, 50, 0.1);
+        }
+        .file-input:hover {
+            background: rgba(50, 205, 50, 0.1);
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            background: #32CD32;
+            color: white;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-submit:hover {
+            background: navy;
+            transform: scale(1.05);
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .logo_box{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo_box">
+            <img style="height: 50px; width: 80px; border-radius: 10%; margin-right: 10px; margin-top: -10px;" src="Dream_logo - Copy.jpg" alt="">
+            <div class="logo">Dream AI</div>
+        </div>
+        <div class="nav-buttons">
+            <a href="#" class="contact-sales" style="margin-left: -200px;">Contact</a>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="cta-banner">AI Solutions &bull; <a href="#">Scan</a></div>
+        <h1 style="margin-left: -900px; align-items: left;" >Dream AI ATS</h1>
+    </header>
+    <div class="content-wrapper">
+        <div class="form-box">
+            <h2>Upload Job Description</h2>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="jobDescription" class="form-label">Job Description</label>
+                    <textarea name="input_text" class="form-control" id="jobDescription" rows="6" placeholder="Enter job description here..."></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="resumeFile" class="form-label">Upload Resume File</label>
+                    <input name="upload_file" type="file" class="form-control file-input" id="resumeFile">
+                </div>
+                <button type="submit" class="btn btn-submit">Submit</button>
+            </form>
+        </div>
+
+        <img style="height: 150px; width: 300px; border-radius: 10%; margin-right: 20px; margin-top: -130px;" src="Dream_logo - Copy.jpg" alt="">
+
+    </div>
+</body>
+</html>
